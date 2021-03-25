@@ -4,19 +4,18 @@ public class Op {
 
 	public static void main(String[] args) {
 		
-		Scanner s = new Scanner(System.in);
+		int num;
 		
-		int num1, num2;
+		Scanner sc = new Scanner(System.in);
+
+		// next()로 문자열을 입력받아서 charAt(0) 0인 곳부터 데려와라!
+		char a = sc.next().charAt(0);
+	
+		num = (int) a;
 		
-		num1 = s.nextInt();
-		num2 = s.nextInt();
-				
-		System.out.printf("%d + %d = %d\n", num1, num2, num1 + num2);
-		System.out.printf("%d - %d = %d\n", num1, num2, num1 - num2);
-		System.out.printf("%d * %d = %d\n", num1, num2, num1 * num2);
-		System.out.printf("%d / %d = %d\n", num1, num2, num1 / num2);
+		System.out.printf("%d", num);
 		
-		s.close();
+		sc.close();
 		
 	}
 
