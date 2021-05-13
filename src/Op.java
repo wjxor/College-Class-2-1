@@ -3,15 +3,16 @@ import java.util.Scanner;
 public class Op {
 
 	public static void main(String[] args) {
+		int hap;
+		
+		hap = plus(100, 200);
+		System.out.println(hap);
+	}
 
-		Scanner sc = new Scanner(System.in);
+	private static int plus(int num1, int num2) {
+		int result;
+		result = num1 + num2;
 		
-		int i, j, num;
-		i = sc.nextInt();
-		j = sc.nextInt();
-		
-		num = i * 4 + j + 1;
-		
-		System.out.print(num);
+		return result;
 	}
 }
