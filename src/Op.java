@@ -1,18 +1,31 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Op {
 
 	public static void main(String[] args) {
-		int hap;
+		String userName = "hanbit";
+		String input = "";
+		int key;
 		
-		hap = plus(100, 200);
-		System.out.println(hap);
-	}
-
-	private static int plus(int num1, int num2) {
-		int result;
-		result = num1 + num2;
+		try {
+			System.out.print("이름 ==> ");
+			
+			while ((key = System.in.read()) != 13) {
+				input += Character.toString((char)key);
+			}
+			
+			if (userName.equals(input)) {
+				System.out.println(input + "님 어서오세요 ~~");
+			}
+			
+			else
+				System.out.println(input + "님 등록이 안되었습니다 ~~");
+			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
-		return result;
 	}
 }
