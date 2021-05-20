@@ -1,17 +1,21 @@
-import java.io.FileInputStream;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class Op {
 
 	public static void main(String[] args) throws Exception {
-		FileInputStream fis = new FileInputStream("C:/temp/a.txt");
+		FileReader fReader = new FileReader("C:/temp/a.txt");
 		
-		int ch;
+		BufferedReader bReader = new BufferedReader(fReader);
 		
-		while ((ch = fis.read()) != -1) {
-			System.out.print((char) ch);
+		String str = null;
+		
+		while ((str = bReader.readLine()) != null) {
+			System.out.println(str);
 		}
 		
-		fis.close();
+		bReader.close();
+		fReader.close();
 		
 	}
 }
