@@ -1,21 +1,18 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.File;
+import java.util.Scanner;
 
 public class Op {
 
 	public static void main(String[] args) throws Exception {
-		FileReader fReader = new FileReader("C:/temp/a.txt");
-		
-		BufferedReader bReader = new BufferedReader(fReader);
-		
-		String str = null;
-		
-		while ((str = bReader.readLine()) != null) {
-			System.out.println(str);
-		}
-		
-		bReader.close();
-		fReader.close();
-		
+		Scanner sc = new Scanner(new File("C:/temp/a.txt"));
+
+		int hap = 0;
+
+		while (sc.hasNextLine())
+			hap += sc.nextInt();
+
+		System.out.println("합계 : " + hap);
+		sc.close();
+
 	}
 }
